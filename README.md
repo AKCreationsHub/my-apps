@@ -1,20 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AI Content Empire (Web + Android Scaffold)
 
-# Run and deploy your AI Studio app
+This repository now includes:
+- **Web app prototype** (Vite + React + Tailwind classes)
+- **Android starter scaffold** using React Native (Expo) under `mobile/`
 
-This contains everything you need to run your app locally.
+## Web app
 
-View your app in AI Studio: https://ai.studio/apps/drive/1JFIaZ0ZcDkqEc0mh8_CFZBq5IdQBvgaA
+### Run
+1. `npm install`
+2. `npm run dev`
+3. Open `http://localhost:5173`
 
-## Run Locally
+### Build
+- `npm run build`
 
-**Prerequisites:**  Node.js
+## Android scaffold (`mobile/`)
+
+The mobile folder contains an Expo starter with matching module navigation:
+- Dashboard
+- Research
+- Studio
+- Schedule
+- Analytics
+- Monitor
+- WhatsApp
+
+### Run mobile starter
+1. `cd mobile`
+2. `npm install`
+3. `npm run android`
+
+> Note: APK generation is done from the Expo/EAS pipeline in a real deployment setup.
+
+## Implemented prototype features
+- Research list generation with viral scores
+- Content Studio tabs (script/voice/visuals/preview)
+- Calendar scheduling form
+- Analytics charts (line/bar/pie)
+- Competitor monitor table
+- WhatsApp/Twilio settings UI
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Optional API keys
+- `VITE_GEMINI_API_KEY` for script generation
+- `VITE_SERPAPI_KEY` for Google Trends-backed research
+
+If these are missing, the app uses built-in prototype fallbacks.
